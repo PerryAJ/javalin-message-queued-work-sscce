@@ -1,0 +1,19 @@
+[versions]
+# Library/Dependency Versions
+apacheCommons = "3.12.0"
+artemis = "2.27.1"
+javalin = "5.3.2" # if updated, be sure to update version of jettyServletApi
+junit = "5.9.1"
+slf4j = "2.0.3"
+
+[libraries]
+# Dependencies referencable in buildscripts. Note that dashes are replaced by periods in the buildscript reference.
+# quarkus-arc -> libs.quarkus.arc
+artemisCoreClient = { module = "org.apache.activemq:artemis-core-client", version.ref = "artemis" }
+artemisServer = { module = "org.apache.activemq:artemis-server", version.ref = "artemis" }
+commonsLang = { module = "org.apache.commons:commons-lang3", version.ref = "apacheCommons"}
+javalin = { module = "io.javalin:javalin", version.ref = "javalin" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+moshi = { module = "com.squareup.moshi:moshi", version = "1.14.0" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
