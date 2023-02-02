@@ -16,6 +16,7 @@ dependencies {
     implementation(libs.moshi)
     implementation(libs.artemisServer)
     implementation(libs.artemisCoreClient)
+    testImplementation(libs.junit)
 }
 
 application {
